@@ -42,11 +42,11 @@ for i in range(1000):
 
 # tf.argmax(y,1) is the label our model thinks is most likely for each input
 # tf.argmax(y_,1) is the correct label
-correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))  #list of booleans
-accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))  #cast to floating point numbers and then take the mean
+  correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_,1))  #list of booleans
+  accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))  #cast to floating point numbers and then take the mean
 
 # another model defined above for the accuracy computation
-print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+  print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
 
 
 
